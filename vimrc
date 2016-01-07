@@ -5,6 +5,9 @@ set autoread
 let g:airline_powerline_fonts = 1
 
 
+augroup AuNERDTreeCmd
+  autocmd!
+augroup end
 
 colorscheme atom-dark 
 
@@ -23,8 +26,8 @@ map <c-t> :TagbarToggle<CR>
 
 filetype plugin indent on
 
-set autoread
 
+set number
 ":autocmd CursorMoved * exe printf('match IncSearch /\V\<%s\>/', escape(expand('<cword>'), '/\'))
 
 set t_Co=256
